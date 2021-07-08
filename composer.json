@@ -36,6 +36,10 @@
         "patchLevel": {
             "drupal/core": "-p2"
         },
+        "hooks": {
+            "post-checkout": "composer install",
+            "post-merge": "composer install"
+        },
         "drupal-scaffold": {
             "allowed-packages": [
                 "pantheon-systems/drupal-integrations"
@@ -50,11 +54,19 @@
             }
         }
     },
+    "scripts": {
+        "cghooks": "vendor/bin/cghooks",
+        "post-install-cmd": "cghooks add --ignore-lock",
+        "post-update-cmd": "cghooks update"
+    },
     "config": {
         "preferred-install": "dist",
         "sort-packages": true,
         "platform": {
             "php": "7.4"
         }
-    }
+    },
+    "require-dev": {
+        "brainmaestro/composer-git-hooks": "^2.8"
+    }    
 }
