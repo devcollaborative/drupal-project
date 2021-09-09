@@ -66,7 +66,7 @@
     },
     "require-dev": {
         "brainmaestro/composer-git-hooks": "^2.8",
-        "grasmash/drupal-security-warning": "1.x-dev",
-        "topfloor/composer-cleanup-vcs-dirs": "dev-composer-2"
+        "grasmash/drupal-security-warning": "*",
+        "topfloor/composer-cleanup-vcs-dirs": "*"
     }    
 }
